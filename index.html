@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космос</title>
+    <style>
+        body{
+            height: 100vh;
+            color: black;
+            font-size: 2rem;
+            background-image: linear-gradient(180deg,blue, rgb(21, 210, 243));
+        }
+        button{
+            font-size: 2rem;
+            padding: 1rem;
+            margin: 1rem;
+            color: rgb(37, 37, 34);
+            
+        }
+        img{
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <button id="earth">
+        Земля
+    </button>
+    <button id="venus">
+        Венера
+    </button>
+    <button id="upiter">
+        Юпитер
+    </button>
+    <button id="satur">
+        Сатурн
+    </button>
+    <button id="io">
+        Ио
+    </button>
+    <button id="titan">
+        Титан
+    </button>
+    <button id="europe">
+        Европа
+    </button>
+    <button id="plut">
+        Плутон
+    </button>
+    <button id="uran">
+        Уран
+    </button>
+    <br>
+    <img id="photo" src="" alt="">
+    <h1 id="name"></h1>
+    <h2 id="mass"></h1>
+    <h2 id="gravity"></h1>
+    <h2 id="temp"></h1>
+
+    <script>
+        let earth = {
+            photo : 'https://media.npr.org/assets/img/2013/03/06/bluemarble3k-smaller-nasa_custom-644f0b7082d6d0f6814a9e82908569c07ea55ccb-s800-c85.jpg',
+            name : 'Земля',
+            mass : '5,972e24',
+            gravity : '8,87 м/с²',
+            temp : ' 14 °C ',
+        }
+        let venus = {
+            photo : 'https://www.nasa-g0v.com/venus.jpg',
+            name : 'Венера',
+            mass : '4,867е24 кг',
+            gravity : '9,8 m/c²',
+            temp : ' 467 °C ',
+        }
+        let upiter = {
+            photo : 'https://bm.img.com.ua/berlin/storage/orig/b/a0/a230bd480bce318c6f60af6c09fada0b.jpg',
+            name : 'Юпитер',
+            mass : '1,898e27 кг',
+            gravity : '24,79 м/с²',
+            temp : ' 21 °С ',
+        }
+        let satur = {
+            photo : 'https://upload.wikimedia.org/wikipedia/commons/c/c1/Saturn_-_April_25_2016_%2837612580000%29.png',
+            name : 'Сатурн',
+            mass : '5,683е26 кг',
+            gravity : '10,44 м/с²',
+            temp : ' -170 °С ',
+        }
+        let io = {
+            photo : 'https://upload.wikimedia.org/wikipedia/commons/7/7b/Io_highest_resolution_true_color.jpg',
+            name : 'Ио',
+            mass : '8,9319е22 кг',
+            gravity : '1,796 м/с²',
+            temp : ' -143 °С ',
+        }
+        let titan = {
+            photo : 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Titan_multi_spectral_overlay.jpg/220px-Titan_multi_spectral_overlay.jpg',
+            name : 'Титан',
+            mass : '1,3452е23 кг',
+            gravity : '1,352 м/с²',
+            temp : ' −179 °C ',
+        }
+        let europe = {
+            photo : 'https://upload.wikimedia.org/wikipedia/commons/5/54/Europa-moon.jpg',
+            name : 'Европа',
+            mass : '	4,8017е22 кг',
+            gravity : '1,315 м/с²',
+            temp : ' -160 °С ',
+        }
+        let plut = {
+            photo : 'https://cdn25.img.ria.ru/images/7e4/2/5/1564269868_0:0:1280:720_600x0_80_0_0_3970dbff8f2938a1152039bb27b1816b.jpg',
+            name : 'Плутон',
+            mass : '1,303е22 кг,',
+            gravity : '0,62 м/с²',
+            temp : ' -213 °С ',
+        }
+        let uran = {
+            photo : 'https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2014/09/03/140903105827_uranus_space_624x351_spl.jpg',
+            name : 'Уран',
+            mass : '8,681е25 кг',
+            gravity : '8,87 м/с²',
+            temp : ' −224 °C ',
+        }
+/////////////////////////////////////////////////
+document.getElementById('earth').addEventListener('click', function(){
+    show(earth)
+})  
+document.getElementById('venus').addEventListener('click', function(){
+    show(venus)
+}) 
+document.getElementById('upiter').addEventListener('click', function(){
+    show(upiter)
+}) 
+document.getElementById('satur').addEventListener('click', function(){
+    show(satur)
+}) 
+document.getElementById('io').addEventListener('click', function(){
+    show(io)
+})
+document.getElementById('titan').addEventListener('click', function(){
+    show(titan)
+})
+document.getElementById('europe').addEventListener('click', function(){
+    show(europe)
+})
+document.getElementById('plut').addEventListener('click', function(){
+    show(plut)
+})
+document.getElementById('uran').addEventListener('click', function(){
+    show(uran)
+})
+/////////////////////////////////////////////////////
+
+function show(obj){
+    document.getElementById('photo').src = obj.photo
+    document.getElementById('name').innerText = obj.name
+    document.getElementById('mass').innerText = obj.mass
+    document.getElementById('gravity').innerText = obj.gravity
+    document.getElementById('temp').innerText = obj.temp
+}
+
+
+
+
+    </script>        
+    
+</body>
+</html>
